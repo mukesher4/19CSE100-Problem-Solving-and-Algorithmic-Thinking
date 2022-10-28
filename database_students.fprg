@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:27:10 AM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTAtMjg7MDk6MjQ6MTAgQU07Mjg4NA=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTAtMjg7MTA6Mjc6MTAgQU07NDsyOTkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="String" array="False" size=""/>
+            <output expression="&quot;Enter name of user&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter roll no. of user:&quot;" newline="True"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <input variable="b"/>
+            <declare name="c" type="String" array="False" size=""/>
+            <output expression="&quot;Enter address&quot;" newline="True"/>
+            <input variable="c"/>
+            <declare name="d" type="String" array="False" size=""/>
+            <output expression="&quot;Enter blood group&quot;" newline="True"/>
+            <input variable="d"/>
+            <declare name="e" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter phone number&quot;" newline="True"/>
+            <input variable="e"/>
+            <declare name="f" type="String" array="False" size=""/>
+            <output expression="&quot;Enter department&quot;" newline="True"/>
+            <input variable="f"/>
+            <output expression="&quot;name: &quot; &amp;a&amp; &#13;&#10;&quot;,&quot; &amp;ToChar(13)&amp;&#13;&#10;&quot;roll no: &quot; &amp;b&amp;&#13;&#10;&quot;,&quot; &amp;ToChar(13)&amp;&#13;&#10;&#13;&#10;&quot;address: &quot; &amp;c&amp;&#13;&#10;&quot;,&quot; &amp;ToChar(13)&amp;&#13;&#10;&quot;blood group: &quot; &amp;d&amp;&#13;&#10;&quot;,&quot; &amp;ToChar(13)&amp;&#13;&#10;&quot;ph no.: &quot; &amp;e&amp;&#13;&#10;&quot;,&quot; &amp;ToChar(13)&amp;&#13;&#10;&quot;department: &quot; &amp;f" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

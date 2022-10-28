@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:25:44 AM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTAtMjg7MTA6MjQ6NTkgQU07Mjg4OQ=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTAtMjg7MTA6MjU6MDEgQU07MTttdWtlcztERVNLVE9QLUFRNkhFTkc7MjAyMi0xMC0yODswOToyNDoxMCBBTTtkYXRhYmFzZV9zdHVkZW50cy5mcHJnOzgyNzA="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTAtMjg7MTA6MjU6NDQgQU07MTsyOTky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="g" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter semester: &quot;" newline="True"/>
+            <input variable="g"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter subject code 1: &quot;" newline="True"/>
+            <input variable="i"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter subject code 2: &quot;" newline="True"/>
+            <input variable="j"/>
+            <declare name="h" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter subject code 3: &quot;" newline="True"/>
+            <input variable="h"/>
+            <declare name="f1" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter marks of: &quot; &amp;i" newline="True"/>
+            <input variable="f1"/>
+            <declare name="f2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter marks of: &quot; &amp;j" newline="True"/>
+            <input variable="f2"/>
+            <declare name="f3" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter marks of: &quot; &amp;h" newline="True"/>
+            <input variable="f3"/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <assign variable="avg" expression="(f1+f2+f3)/3"/>
+            <output expression="&quot;Average of all 3 subs: &quot; &amp;avg" newline="True"/>
+            <declare name="l" type="Integer" array="False" size=""/>
+            <assign variable="l" expression="f1+f2+f3"/>
+            <output expression="&quot;Total marks: &quot; &amp;l&amp; &quot;/300&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
