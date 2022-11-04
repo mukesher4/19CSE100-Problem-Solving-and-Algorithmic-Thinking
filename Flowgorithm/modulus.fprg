@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22068"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:49:35 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTExLTA0OzEwOjIyOjQ0IEFNOzMwNTU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTExLTA0OzEwOjIzOjA1IEFNOzE7Q0IuRU4uVTRDWVMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTExLTA0OzA5OjUxOjM1IEFNO3N3YXAgYWRkIHN1Yi5mcHJnOzc5NTU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTExLTA0OzEwOjQ5OjM1IEFNOzc7MzE3OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Modulus operator "/>
+            <comment text="Declaring and getting values of variables"/>
+            <declare name="a, b, c, d" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter in format: number 2%number 1&quot;" newline="True"/>
+            <output expression="&quot;Enter number 1: &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter number 2: &quot;" newline="True"/>
+            <input variable="b"/>
+            <assign variable="c" expression="b/a"/>
+            <comment text="c is quotient (integer value)"/>
+            <assign variable="d" expression="b-c*a"/>
+            <comment text="d is reminder"/>
+            <output expression="&quot;number 2%number 1 :&quot; &amp;d" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
