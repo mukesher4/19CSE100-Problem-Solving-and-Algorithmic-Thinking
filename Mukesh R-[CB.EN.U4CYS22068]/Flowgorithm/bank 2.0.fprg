@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22068"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:59:10 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTExLTE4OzA5OjU3OjE3IEFNOzMwNzY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTExLTE4OzEwOjEwOjI0IEFNOzI7Q0IuRU4uVTRDWVMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTExLTE4OzA5OjA0OjI0IEFNO2JhbmsuZnByZzs3MjM3"/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTExLTE4OzEwOjU5OjEwIEFNOzk7MzE3OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to ATM 2.0&quot;" newline="True"/>
+            <comment text="Declaring variables opt, accno, pin, spin, amtw, amtd, npin, nnpin, balance, name"/>
+            <declare name="opt, accno, pin, spin, amtw, amtd, npin, nnpin, balance" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <comment text="Inputing variables name, pin, accno"/>
+            <output expression="&quot;Enter name:&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter secret pin:&quot;" newline="True"/>
+            <input variable="pin"/>
+            <output expression="&quot;Enter account number:&quot;" newline="True"/>
+            <input variable="accno"/>
+            <assign variable="balance" expression="54000"/>
+            <output expression="&quot;Option 1: Widthdraw&quot;" newline="True"/>
+            <output expression="&quot;Option 2: Deposit&quot;" newline="True"/>
+            <output expression="&quot;Option 3: Change pin&quot;" newline="True"/>
+            <output expression="&quot;Option 4: Check balance&quot;" newline="True"/>
+            <input variable="opt"/>
+            <if expression="opt==1">
+                <then>
+                    <comment text="withdrawal "/>
+                    <output expression="&quot;Enter amount to be withdrawn:&quot;" newline="True"/>
+                    <input variable="amtw"/>
+                    <comment text="amount should be &gt; 500"/>
+                    <if expression="amtw&gt;500">
+                        <then>
+                            <output expression="&quot;Enter pin: &quot;" newline="True"/>
+                            <input variable="spin"/>
+                            <comment text="pins should match"/>
+                            <if expression="spin=pin">
+                                <then>
+                                    <comment text="amount should not exceed balance"/>
+                                    <if expression="balance&gt;amtw">
+                                        <then>
+                                            <output expression="&quot;Request successful....&quot;" newline="True"/>
+                                            <assign variable="balance" expression="balance-amtw"/>
+                                            <output expression="&quot;New balance: &quot; &amp;balance" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Amount requested is greater than balance&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Incorrect pin&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Amount should be greater than &#8377;500&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="opt==2">
+                        <then>
+                            <comment text="deposit"/>
+                            <output expression="&quot;Enter amount to be deposited:&quot;" newline="True"/>
+                            <input variable="amtd"/>
+                            <output expression="&quot;Enter pin: &quot;" newline="True"/>
+                            <input variable="spin"/>
+                            <comment text="pins should match"/>
+                            <if expression="spin==pin">
+                                <then>
+                                    <output expression="&quot;Amount deposited successfully&quot;" newline="True"/>
+                                    <assign variable="balance" expression="balance+amtd"/>
+                                    <output expression="&quot;New balance: &quot; &amp;balance" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Incorrect pin&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="opt==3">
+                                <then>
+                                    <comment text="Changing pin"/>
+                                    <output expression="&quot;Enter old pin: &quot;" newline="True"/>
+                                    <input variable="spin"/>
+                                    <comment text="pins should match"/>
+                                    <if expression="spin==pin">
+                                        <then>
+                                            <output expression="&quot;Enter new pin: &quot;" newline="True"/>
+                                            <input variable="npin"/>
+                                            <output expression="&quot;Enter again: &quot;" newline="True"/>
+                                            <input variable="nnpin"/>
+                                            <comment text="both eneted new pins should match "/>
+                                            <if expression="nnpin==npin">
+                                                <then>
+                                                    <output expression="&quot;Pin changed successfully&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Pins don't match&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Incorrect pin&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="opt==4">
+                                        <then>
+                                            <comment text="checking balance"/>
+                                            <output expression="&quot;Enter pin: &quot;" newline="True"/>
+                                            <input variable="spin"/>
+                                            <comment text="pins should match"/>
+                                            <if expression="spin==pin">
+                                                <then>
+                                                    <output expression="&quot;Balance amount: &quot; &amp;balance" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Incorrect pin&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Enter an correct option number. (1,2,3,4)&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
