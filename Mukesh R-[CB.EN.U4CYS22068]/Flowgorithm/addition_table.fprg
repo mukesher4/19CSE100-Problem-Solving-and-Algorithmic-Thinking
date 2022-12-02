@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22068"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:44:48 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzA5OjE0OjE3IEFNOzMzMTk="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzEwOjE3OjEzIEFNOzI7Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzA5OjQwOjEzIEFNO21sdGlwbGljYXRpb25fdGFibGUuZnByZzs5MzQ0"/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzEwOjQ0OjQ4IEFNOzY7MzQzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring variables"/>
+            <declare name="n, sum, numoftable" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="0"/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="numoftable" expression="1"/>
+            <while expression="numoftable&lt;11">
+                <comment text="core prgoram for table, where var(a), var(m) increases by one for each table"/>
+                <for variable="n" start="1" end="10" direction="inc" step="1">
+                    <assign variable="sum" expression="n+numoftable"/>
+                    <output expression="numoftable&amp;&quot;+&quot;&amp;n&amp;&quot;=&quot;&amp;sum" newline="True"/>
+                </for>
+                <comment text="a table has completed"/>
+                <assign variable="numoftable" expression="numoftable+1"/>
+            </while>
+            <comment text="when numoftable=10, loop completes"/>
+        </body>
+    </function>
+</flowgorithm>

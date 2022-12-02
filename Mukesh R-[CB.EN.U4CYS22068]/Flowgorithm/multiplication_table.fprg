@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22068"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:46:34 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzA5OjQwOjEzIEFNOzMzMTQ="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzEwOjQ2OjM0IEFNOzQ7MzQyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring variables"/>
+            <declare name="i, n, m, mult, numoftable" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <assign variable="m" expression="1"/>
+            <assign variable="n" expression="1"/>
+            <assign variable="numoftable" expression="1"/>
+            <while expression="numoftable&lt;11">
+                <comment text="core prgoram for table, where var(numoftable), var(m) increases by one for each table"/>
+                <for variable="n" start="1" end="10" direction="inc" step="1">
+                    <assign variable="mult" expression="n*m"/>
+                    <output expression="numoftable&amp;&quot;*&quot;&amp;n&amp;&quot;=&quot;&amp;mult" newline="True"/>
+                </for>
+                <comment text="a table has completed "/>
+                <assign variable="numoftable" expression="numoftable+1"/>
+                <assign variable="m" expression="m+1"/>
+            </while>
+            <comment text="when numoftable=10 loop completes"/>
+        </body>
+    </function>
+</flowgorithm>
