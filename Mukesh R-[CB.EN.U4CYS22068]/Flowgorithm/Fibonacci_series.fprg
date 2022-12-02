@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22068"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:25:54 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzA5OjU5OjMxIEFNOzMzMjQ="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzEwOjI1OjU0IEFNOzQ7MzQyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Fibonacci series&quot;" newline="True"/>
+            <comment text="declaring variables"/>
+            <declare name="limit, no1, no2, fibsum, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input number of times: &quot;" newline="True"/>
+            <input variable="limit"/>
+            <assign variable="fibsum" expression="0"/>
+            <assign variable="no1" expression="1"/>
+            <assign variable="no2" expression="1"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;limit">
+                <comment text="(no1, no2)"/>
+                <assign variable="fibsum" expression="no1+no2"/>
+                <comment text="OUTPUT &quot;no1+no2=fibsum&quot;"/>
+                <output expression="no1&amp;&quot; + &quot;&amp;no2&amp;&quot; = &quot;&amp;fibsum" newline="True"/>
+                <assign variable="no1" expression="no2"/>
+                <assign variable="no2" expression="fibsum"/>
+                <comment text="(no1,no2)=(no2,fibsum)"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <comment text="loop completes according to user defined limit variable "/>
+        </body>
+    </function>
+</flowgorithm>

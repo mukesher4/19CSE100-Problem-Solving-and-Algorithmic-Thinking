@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22068"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:30:20 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzA5OjMyOjMxIEFNOzMzMTU="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzEwOjMwOjIwIEFNOzU7MzQxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables"/>
+            <declare name="n, value, limit" type="Integer" array="False" size=""/>
+            <output expression="&quot;Factorial of ?: &quot;" newline="True"/>
+            <input variable="limit"/>
+            <assign variable="n" expression="1"/>
+            <assign variable="value" expression="1"/>
+            <if expression="limit&lt;0">
+                <then>
+                    <comment text="when negative numbers are entered, loop breaks"/>
+                    <output expression="&quot;Factorial of negative numbers can't be found&quot;" newline="True"/>
+                </then>
+                <else>
+                    <while expression="n&lt;limit+1">
+                        <assign variable="value" expression="value*n"/>
+                        <assign variable="n" expression="n+1"/>
+                    </while>
+                    <comment text="loop breaks when number*(number-1) completes"/>
+                    <output expression="&quot;Value of &quot; &amp;limit&amp; &quot;!: &quot;" newline="True"/>
+                    <output expression="value" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

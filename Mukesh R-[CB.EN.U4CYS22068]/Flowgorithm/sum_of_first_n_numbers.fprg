@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22068"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:22:06 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzA5OjA1OjI2IEFNOzMzMTk="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA2ODsyMDIyMjNNQVlDMDEwNTsyMDIyLTEyLTAyOzEwOjIyOjA2IEFNOzQ7MzQxOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring variables"/>
+            <declare name="i, sum, limit" type="Integer" array="False" size=""/>
+            <output expression="&quot;SUM OF FIRST __ POSITIVE NUMBERS? &quot;" newline="True"/>
+            <input variable="limit"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="sum" expression="0"/>
+            <comment text="sum increases by one everytime loop runs"/>
+            <while expression="i&lt;limit">
+                <assign variable="i" expression="i+1"/>
+                <assign variable="sum" expression="sum+i"/>
+            </while>
+            <output expression="&quot;THE SUM OF THE NUMBERS: &quot;" newline="True"/>
+            <output expression="sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
