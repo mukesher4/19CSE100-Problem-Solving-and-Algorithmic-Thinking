@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:34:00 AM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTItMDk7MDk6MTQ6MDggQU07Mjg5MQ=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTItMDk7MDk6MzQ6MDAgQU07MTsyOTkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, i, z" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number of values&quot;" newline="True"/>
+            <input variable="x"/>
+            <declare name="y" type="Integer" array="True" size="x"/>
+            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                <output expression="&quot;enter:&quot;" newline="True"/>
+                <input variable="z"/>
+                <assign variable="y[i]" expression="z"/>
+            </for>
+            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                <output expression="&quot;Array[&quot;&amp;i&amp;&quot;] =&quot;&amp;y[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:24:45 AM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTItMDk7MTE6MDg6NDAgQU07Mjg4Mw=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTItMDk7MTE6MjQ6NDUgQU07MjsyOTk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, z, i" type="Integer" array="False" size=""/>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter value of Array[&quot;&amp;i&amp;&quot;]&quot;" newline="True"/>
+                <input variable="a[i]"/>
+            </for>
+            <assign variable="y" expression="a[0]"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <if expression="y&lt;a[i]">
+                    <then>
+                        <assign variable="y" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Largest number: &quot;&amp;y" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
