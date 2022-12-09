@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:38:29 PM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTItMDk7MDk6MzE6NTkgUE07MjkxMQ=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjItMTItMDk7MDk6Mzg6MjkgUE07MTszMDIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sz, i, x, count" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter size of array: &quot;" newline="True"/>
+            <input variable="sz"/>
+            <declare name="ary" type="Integer" array="True" size="sz"/>
+            <output expression="&quot;Enter number to find frequency: &quot;" newline="True"/>
+            <input variable="x"/>
+            <for variable="i" start="0" end="sz-1" direction="inc" step="1">
+                <output expression="&quot;Array[&quot;&amp;i&amp;&quot;] = &quot;" newline="True"/>
+                <input variable="ary[i]"/>
+            </for>
+            <assign variable="count" expression="0"/>
+            <for variable="i" start="0" end="sz-1" direction="inc" step="1">
+                <if expression="ary[i]==x">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Frequency of &quot;&amp;x&amp;&quot; in array is: &quot;&amp;count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
