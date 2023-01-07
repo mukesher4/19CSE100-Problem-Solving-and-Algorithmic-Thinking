@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-06 08:02:33 PM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MDY6NDU6NTEgUE07MjkwMQ=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MDg6MDI6MzMgUE07OTszMDEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="balance, withdraw, deposit" type="Real" array="False" size=""/>
+            <declare name="choice" type="Integer" array="False" size=""/>
+            <output expression="&quot;Welcome to Bank&quot;" newline="True"/>
+            <output expression="&quot;Enter balance amount in your account: &quot;" newline="True"/>
+            <input variable="balance"/>
+            <output expression="negerreal(balance)" newline="True"/>
+            <while expression="balance&lt;500">
+                <output expression="&quot;Minimum balance is not being maintained&quot;" newline="True"/>
+                <output expression="&quot;Try again&quot;" newline="True"/>
+                <input variable="balance"/>
+            </while>
+            <output expression="&quot;You have $&quot;&amp;balance&amp;&quot; in your account&quot;" newline="True"/>
+            <output expression="&quot;Select any one option:&quot;&amp;ToChar(13)&amp;&quot;(1)Withdraw&quot;&amp;ToChar(13)&amp;&quot;(2)Deposit&quot;&amp;ToChar(13)&amp;&quot;(3)Referring a friend&quot;" newline="True"/>
+            <input variable="choice"/>
+            <output expression="negerint(choice)" newline="True"/>
+            <if expression="choice==1">
+                <then>
+                    <output expression="&quot;Withdraw&quot;" newline="True"/>
+                    <output expression="&quot;Enter amount to withdraw: &quot;" newline="True"/>
+                    <input variable="withdraw"/>
+                    <output expression="negerreal(withdraw)" newline="True"/>
+                    <if expression="balance&gt;withdraw">
+                        <then>
+                            <if expression="balance&gt;=500">
+                                <then>
+                                    <assign variable="balance" expression="balance+withdraw"/>
+                                    <output expression="&quot;You have withdrawn $&quot;&amp;withdraw&amp;&quot; from your account&quot;" newline="True"/>
+                                    <output expression="&quot;You have $&quot;&amp;balance&amp;&quot; in your account&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Error&quot;" newline="True"/>
+                                    <output expression="&quot;Minimum balance of $500 is not being maintained&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Error&quot;" newline="True"/>
+                            <output expression="&quot;Amount enetered is greater than the balance amount in your account&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="choice==2">
+                        <then>
+                            <output expression="&quot;Deposit&quot;" newline="True"/>
+                            <output expression="&quot;Enter amount to deposit: &quot;" newline="True"/>
+                            <input variable="deposit"/>
+                            <output expression="negerreal(deposit)" newline="True"/>
+                            <assign variable="balance" expression="balance+deposit"/>
+                            <output expression="&quot;You have deposited $&quot;&amp;deposit&amp;&quot; into your account&quot;" newline="True"/>
+                            <output expression="&quot;You have $&quot;&amp;balance&amp;&quot; in your account&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="choice==3">
+                                <then>
+                                    <output expression="&quot;Referring a friend: &quot;" newline="True"/>
+                                    <output expression="&quot;Amount of $50 is credited to your account&quot;" newline="True"/>
+                                    <assign variable="balance" expression="balance+50"/>
+                                    <output expression="&quot;You have $&quot;&amp;balance&amp;&quot; in your account&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Error&quot;" newline="True"/>
+                                    <output expression="&quot;Enter proper option&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="negerint" type="String" variable="null">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="null, errmsg" type="String" array="False" size=""/>
+            <assign variable="null" expression="&quot;Ok&quot;"/>
+            <while expression="value&lt;0">
+                <assign variable="errmsg" expression="&quot;Error&quot;&amp;ToChar(13)&amp;&quot;Negative input&quot;"/>
+                <output expression="errmsg" newline="True"/>
+                <output expression="&quot;Try again&quot;" newline="True"/>
+                <input variable="value"/>
+            </while>
+        </body>
+    </function>
+    <function name="negerreal" type="String" variable="null">
+        <parameters>
+            <parameter name="value" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="errmsg" type="String" array="False" size=""/>
+            <declare name="null" type="String" array="False" size=""/>
+            <assign variable="null" expression="&quot;Ok&quot;"/>
+            <while expression="value&lt;0">
+                <assign variable="errmsg" expression="&quot;Error&quot;&amp;ToChar(13)&amp;&quot;Negative input&quot;"/>
+                <output expression="errmsg" newline="True"/>
+                <output expression="&quot;Try again&quot;" newline="True"/>
+                <input variable="value"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

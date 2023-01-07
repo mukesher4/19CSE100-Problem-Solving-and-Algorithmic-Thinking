@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-06 10:24:07 PM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MTA6MTE6NDIgUE07Mjg4OQ=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MTA6MjQ6MDcgUE07MTszMDAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number&quot;" newline="True"/>
+            <input variable="number"/>
+            <call expression="factorials(number)"/>
+        </body>
+    </function>
+    <function name="factorials" type="Integer" variable="factorial">
+        <parameters>
+            <parameter name="number" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="factorial, i" type="Integer" array="False" size=""/>
+            <assign variable="factorial" expression="1"/>
+            <for variable="i" start="0" end="number-1" direction="inc" step="1">
+                <assign variable="factorial" expression="factorial*(i+1)"/>
+            </for>
+            <output expression="factorial" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

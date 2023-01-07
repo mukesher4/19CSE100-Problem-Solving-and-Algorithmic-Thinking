@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-06 08:36:50 PM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MDg6MTI6NDEgUE07Mjg5Ng=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MDg6MzY6NTAgUE07MTszMDEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="amount" type="Real" array="False" size=""/>
+            <declare name="year, i" type="Integer" array="False" size=""/>
+            <declare name="rate" type="Integer" array="True" size="5"/>
+            <assign variable="rate[0]" expression="3"/>
+            <assign variable="rate[1]" expression="4"/>
+            <assign variable="rate[2]" expression="5"/>
+            <assign variable="rate[3]" expression="5.5"/>
+            <assign variable="rate[4]" expression="6"/>
+            <output expression="&quot;Enter amount deposited &quot;" newline="True"/>
+            <input variable="amount"/>
+            <output expression="&quot;Enter no. of year: &quot;" newline="True"/>
+            <input variable="year"/>
+            <if expression="year==1">
+                <then>
+                    <assign variable="amount" expression="amount(1+rate[0]*0.01)"/>
+                </then>
+                <else>
+                    <if expression="year==2">
+                        <then/>
+                        <else>
+                            <if expression="year==3">
+                                <then/>
+                                <else>
+                                    <if expression="year==4">
+                                        <then/>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

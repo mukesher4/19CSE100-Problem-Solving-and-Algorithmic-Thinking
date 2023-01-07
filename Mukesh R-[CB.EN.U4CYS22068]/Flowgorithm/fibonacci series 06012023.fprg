@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-06 10:07:05 PM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MDk6NDc6MDkgUE07MjkwOQ=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MTA6MDc6MDUgUE07NDszMDA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of Fibonacci series to be printed: &quot;" newline="True"/>
+            <input variable="number"/>
+            <call expression="fibonacci(number)"/>
+        </body>
+    </function>
+    <function name="fibonacci" type="String" variable="result">
+        <parameters>
+            <parameter name="number" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="String" array="False" size=""/>
+            <declare name="counter, i" type="Integer" array="False" size=""/>
+            <declare name="array" type="Integer" array="True" size="number"/>
+            <assign variable="counter" expression="1"/>
+            <assign variable="array[0]" expression="0"/>
+            <for variable="i" start="1" end="number-1" direction="inc" step="1">
+                <assign variable="array[i]" expression="counter"/>
+                <assign variable="counter" expression="counter+array[i-1]"/>
+            </for>
+            <assign variable="result" expression="&quot;&quot;"/>
+            <for variable="i" start="0" end="number-1" direction="inc" step="1">
+                <assign variable="result" expression="result + ToString(array[i])"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

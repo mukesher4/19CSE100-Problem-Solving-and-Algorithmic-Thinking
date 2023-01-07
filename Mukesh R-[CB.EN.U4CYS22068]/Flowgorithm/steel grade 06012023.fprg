@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mukes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-06 09:44:45 PM"/>
+        <attribute name="created" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MDg6NDM6MTMgUE07Mjg5OQ=="/>
+        <attribute name="edited" value="bXVrZXM7REVTS1RPUC1BUTZIRU5HOzIwMjMtMDEtMDY7MDk6NDQ6NDUgUE07MTszMDE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="units, i, cond" type="Integer" array="False" size=""/>
+            <declare name="hard, carb, str" type="Real" array="False" size=""/>
+            <output expression="&quot;How many steels do you want to Grade? &quot;" newline="True"/>
+            <input variable="units"/>
+            <declare name="steel" type="Integer" array="True" size="units"/>
+            <for variable="i" start="0" end="units-1" direction="inc" step="1">
+                <assign variable="cond" expression="0"/>
+                <output expression="&quot;Entry data for &quot;&amp;(i+1)&amp;&quot; :&quot;" newline="True"/>
+                <input variable="hard"/>
+                <input variable="carb"/>
+                <input variable="str"/>
+                <assign variable="steel[i]" expression="GradeSteel(hard,carb,str)"/>
+                <output expression="&quot;Grade for steel &quot;&amp;(i+1)&amp;&quot; : &quot;&amp;steel[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="gradeSteel" type="Integer" variable="grade">
+        <parameters>
+            <parameter name="hard" type="Real" array="False"/>
+            <parameter name="carb" type="Real" array="False"/>
+            <parameter name="str" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="grade" type="Integer" array="False" size=""/>
+            <if expression="hard&gt;50 &amp;&amp; carb &lt;0.7 &amp;&amp; str&gt;5600">
+                <then>
+                    <assign variable="grade" expression="10"/>
+                </then>
+                <else>
+                    <if expression="hard&gt;50 &amp;&amp; carb &lt;0.7">
+                        <then>
+                            <assign variable="grade" expression="9"/>
+                        </then>
+                        <else>
+                            <if expression="hard&gt;50 &amp;&amp; str&gt;5600">
+                                <then>
+                                    <assign variable="grade" expression="7"/>
+                                </then>
+                                <else>
+                                    <if expression="str&gt;5600 &amp;&amp; carb&lt;0.7">
+                                        <then>
+                                            <assign variable="grade" expression="8"/>
+                                        </then>
+                                        <else>
+                                            <if expression="carb &lt;0.7">
+                                                <then>
+                                                    <assign variable="grade" expression="6"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="str&gt;5600">
+                                                        <then>
+                                                            <assign variable="grade" expression="6"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="hard&gt;50">
+                                                                <then>
+                                                                    <assign variable="grade" expression="6"/>
+                                                                </then>
+                                                                <else>
+                                                                    <assign variable="grade" expression="5"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
